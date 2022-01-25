@@ -3,7 +3,7 @@ import { Link, Outlet } from 'react-router-dom';
 
 const Layout = () => {
   return (
-    <Container fluid className="h-100 overflow-auto">
+    <Container fluid className="chat-block">
 
       <Row>
         <Navbar expand="lg" variant="light" bg="light" className="shadow-sm p-1 mb-3 bg-body rounded">

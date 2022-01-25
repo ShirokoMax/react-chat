@@ -1,24 +1,47 @@
+import React from 'react';
 import { formatDate } from '../utils/index';
 
-const MessageBox = (props) => {
-  const { messages } = props;
+export default class MessageBox extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
-  return (
-    <div className="h-100 overflow-auto px-3 py-3">
-      {messages.map((message, index) => {
-        const formatedDate = formatDate(message.date);
+  scrollToBottom = () => {
+    this.messagesEnd.scrollIntoView({ behavior: "smooth" });
+  }
 
-        return (
-          <div
-            key={message.id}
-            className="text-break mb-2"
-          >
-            <b>{message.username}</b> ({formatedDate}): {message.text}
-          </div>
-        );
-      })}
-    </div>
-  );
+  componentDidMount() {
+    this.scrollToBottom();
+  }
+
+  componentDidUpdate() {
+    this.scrollToBottom();
+  }
+
+  render() {
+    const { messages } = this.props;
+    return (
+      <>
+        <div className="px-3 py-3">
+          {messages.map((message, index) => {
+            const formatedDate = formatDate(message.date);
+
+            return (
+              <div
+                key={message.id}
+                className="text-break mb-2"
+              >
+                <b>{message.username}</b> ({formatedDate}): {message.text}
+              </div>
+            );
+          })}
+        </div>
+        <div
+          style={{ float: "left", clear: "both" }}
+          ref={(el) => { this.messagesEnd = el; }}
+        >
+        </div>
+      </>
+    );
+  }
 };
-
-export default MessageBox;

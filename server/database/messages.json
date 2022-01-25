@@ -1,39 +1,5 @@
 {
   "messages": [
-    {
-      "id": "s1onNOz4BHf-5GCoh7TeF",
-      "userId": "qt6Iq4EULL6SO5QukHZEv",
-      "username": "Maxim",
-      "text": "Hello",
-      "date": "2022-01-24T18:06:44.198Z"
-    },
-    {
-      "id": "3HhtqzCgmP4vENnX0-R_X",
-      "userId": "qt6Iq4EULL6SO5QukHZEv",
-      "username": "Maxim",
-      "text": "Where's all?",
-      "date": "2022-01-24T18:07:04.806Z"
-    },
-    {
-      "id": "OegJ6-XvK-HcRvEgTziWG",
-      "userId": "qt6Iq4EULL6SO5QukHZEv",
-      "username": "Maxim",
-      "text": "heeey",
-      "date": "2022-01-24T19:22:43.903Z"
-    },
-    {
-      "id": "5xsW97Hi739-ciedH2KFJ",
-      "userId": "WRx41KGVOkHjkX1foMjQ2",
-      "username": "Zak",
-      "text": "hello all",
-      "date": "2022-01-25T11:25:28.232Z"
-    },
-    {
-      "id": "bT_mLOLo8rCBHA4kTjlNV",
-      "userId": "qmC33vJK2dEjIVWecMlGN",
-      "username": "Marina",
-      "text": "hi",
-      "date": "2022-01-25T11:25:42.683Z"
-    }
+    
   ]
 }

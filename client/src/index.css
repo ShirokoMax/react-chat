@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.chat-block { 
+  height: 90%;  
+} 
+ 
+.messages-block-parent { 
+  height: 90%;  
+} 
+ 
+.messages-block-chat { 
+  height: 100%; 
+  overflow-y: scroll; 
+}

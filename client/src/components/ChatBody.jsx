@@ -3,7 +3,6 @@ import ChatRooms from './ChatRooms';
 import MessageBox from './MessageBox';
 import UserModal from './UserModal';
 import {
-  Form,
   Button,
   InputGroup,
   ListGroup,
@@ -74,29 +73,32 @@ const ChatBody = () => {
           <ChatRooms rooms={rooms} />
         </Col>
 
-        <Col className="h-100">
-          <Row className="h-100">
-            <MessageBox messages={messages} />
-          </Row>
-
-          <Row>
-            <Form className="px-3" onSubmit={handleSubmit}>
-              <InputGroup className="mb-3 bg-light">
-                <FormControl
-                  name="message"
-                  placeholder="Введите сообщение..."
-                  aria-label="Новое сообщение"
-                  required
-                  value={messageText}
-                  onChange={handleChange}
-                />
-                <Button variant="outline-secondary" type="submit">
-                  Отправить
-                </Button>
-              </InputGroup>
-            </Form>
-          </Row>
-
+        <Col className="h-100"> 
+          <div className="messages-block-parent"> 
+ 
+            <div className="messages-block-chat"> 
+              <MessageBox messages={messages} /> 
+            </div> 
+ 
+            <div className="chat-input"> 
+              <form className="px-3" onSubmit={handleSubmit}>
+                <InputGroup className="mb-3 bg-light"> 
+                  <FormControl 
+                    name="message" 
+                    placeholder="Введите сообщение..." 
+                    aria-label="Новое сообщение" 
+                    required 
+                    value={messageText} 
+                    onChange={handleChange} 
+                  /> 
+                  <Button variant="outline-secondary" type="submit"> 
+                    Отправить 
+                  </Button> 
+                </InputGroup> 
+              </form> 
+            </div> 
+ 
+          </div> 
         </Col>
 
       </Row>
